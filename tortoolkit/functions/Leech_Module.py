@@ -564,9 +564,7 @@ async def print_files(e, files, thash=None, path=None, size=None):
         size = human_readable_bytes(size)
         msg += f"\n💽<b>ᴜᴘʟᴏᴀᴅᴇᴅ ꜱɪᴢᴇ:</b> {str(size)}\n"
         msg += f"\n🧑🏻‍💻<b>ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʏ:</b> @Vijayadithyaa\n"
-        buttons=[ 
-            KeyboardButtonUrl( "💰ᴅᴏɴᴀᴛɪᴏɴ", url-'paypal.me/adithya3300') ],
-
+        msg += f"\n💰<b>ᴅᴏɴᴀᴛɪᴏɴ:</b> <a href='https://t.me/VijayAdithyaa/325'>Credits</a>\n\n"
     for i in msg_li:
         await e.reply(i, parse_mode="html")
         await aio.sleep(1)
