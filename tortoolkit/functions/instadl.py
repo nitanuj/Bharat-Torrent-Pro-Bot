@@ -17,7 +17,7 @@ torlog = logging.getLogger(__name__)
 
 # some helpers
 def get_caption(post: Post) -> str:
-    """https://instagram.com/hey_insta_003"""
+    """adds link to profile for tagged users"""
     caption = post.caption
     replace = '<a href="https://instagram.com/{}/">{}</a>'
     for mention in post.caption_mentions:
@@ -165,8 +165,8 @@ async def _insta_post_downloader(message):
         login = True
     else:
         login = False
-        
-        if login:
+
+    if login:
         try: 
             insta.login(get_val("INSTA_UNAME"), get_val("INSTA_PASS"))
             torlog.info("InstaDL running in Logged Mode")
