@@ -30,7 +30,7 @@ no = "✖"
 yes = "✔"
 # Central object is not used its Acknowledged
 tordb = TorToolkitDB()
-header = '@BharatTorrentPro <b>By OWNER & ADMIN SETTINGS MENU </b>'
+header = '<b>TorToolKitX by <a href="https://github.com/KangersHub/TorToolkitX">KangersHub</a></b>\n<u>ADMIN SETTINGS MENU - Beta v1</u>'
 
 
 async def handle_setting_callback(e):
@@ -72,7 +72,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "ᴄᴏᴍᴘʟᴇᴛᴇᴅ_ꜱᴛʀ", "str", val[0], db, None)
+        await general_input_manager(e, mmes, "COMPLETED_STR", "str", val[0], db, None)
 
     elif cmd[1] == "remstr":
         # what will a general manager require
@@ -86,7 +86,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "ʀᴇᴍᴀɪɴɪɴɢ_ꜱᴛʀ", "str", val[0], db, None)
+        await general_input_manager(e, mmes, "REMAINING_STR", "str", val[0], db, None)
 
     elif cmd[1] == "tguplimit":
         # what will a general manager require
@@ -100,7 +100,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "ᴛɢ_ᴜᴘ_ʟɪᴍɪᴛ", "int", val, db, None)
+        await general_input_manager(e, mmes, "TG_UP_LIMIT", "int", val, db, None)
 
     elif cmd[1] == "maxtorsize":
         # what will a general manager require
@@ -114,7 +114,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "ᴍᴀx_ᴛᴏʀʀᴇɴᴛ_ꜱɪᴢᴇ", "int", val, db, None)
+        await general_input_manager(e, mmes, "MAX_TORRENT_SIZE", "int", val, db, None)
 
     elif cmd[1] == "maxytplsize":
         # what will a general manager require
@@ -129,7 +129,7 @@ async def handle_setting_callback(e):
         val = await get_value(e)
 
         await general_input_manager(
-            e, mmes, "ᴍᴀx_ʏᴛᴘʟᴀʏʟɪꜱᴛ_ꜱɪᴢᴇ", "int", val, db, None
+            e, mmes, "MAX_YTPLAYLIST_SIZE", "int", val, db, None
         )
 
     elif cmd[1] == "rclonemenu":
@@ -247,7 +247,7 @@ async def handle_setting_callback(e):
 
     elif cmd[1] == "editsleepsec":
         await e.answer(
-            "Type the new value for ᴇᴅɪᴛ_ꜱʟᴇᴇᴘ_ꜱᴇᴄꜱ. Note that integer is expected.",
+            "Type the new value for EDIT_SLEEP_SECS. Note that integer is expected.",
             alert=True,
         )
 
@@ -255,7 +255,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "ꜱᴛᴀᴛᴜꜱ_ᴅᴇʟ_ᴛᴏᴜᴛ", "int", val, db, None)
+        await general_input_manager(e, mmes, "EDIT_SLEEP_SECS", "int", val, db, None)
     elif cmd[1] == "statusdeltime":
         await e.answer(
             "Type the new value for STATUS_DEL_TOUT. Note that integer is expected.",
@@ -266,7 +266,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "ꜱᴛᴀᴛᴜꜱ_ᴅᴇʟ_ᴛᴏᴜᴛ", "int", val, db, None)
+        await general_input_manager(e, mmes, "STATUS_DEL_TOUT", "int", val, db, None)
     elif cmd[1] == "fastupload":
         await e.answer("")
 
@@ -344,14 +344,14 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
 
     if submenu is None:
         await get_bool_variable(
-            "LOCKED_USERS", " ʟᴏᴄᴋ ᴛʜᴇ ɢʀᴏᴜᴘ ", menu, "usrlock", session_id
+            "LOCKED_USERS", "Lock the Group", menu, "usrlock", session_id
         )
         await get_bool_variable(
-            "FORCE_DOCUMENTS", " ꜰᴏʀᴄᴇ ᴅᴏᴄᴜᴍᴇɴᴛꜱ ", menu, "fdocs", session_id
+            "FORCE_DOCUMENTS", "FORCE_DOCUMENTS", menu, "fdocs", session_id
         )
         await get_bool_variable(
             "METAINFO_BOT",
-            "[ᴍᴇᴛᴀɪɴꜰᴏʀᴏʙᴏᴛ]ɢᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏꜰ ꜰɪʟᴇꜱ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ.",
+            "[MetainfoRoBot]Get metadata of files in this group.",
             menu,
             "metainfo",
             session_id,
@@ -364,12 +364,12 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
         await get_int_variable("EDIT_SLEEP_SECS", menu, "editsleepsec", session_id)
         await get_int_variable("STATUS_DEL_TOUT", menu, "statusdeltime", session_id)
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
-        await get_sub_menu("☁ ᴏᴘᴇɴ ʀᴄʟᴏɴᴇ ᴍᴇɴᴜ ☁", "rclonemenu", session_id, menu)
-        await get_sub_menu("⚙ ᴄᴏɴᴛʀᴏʟ ᴀᴄᴛɪᴏɴꜱ ⚙", "ctrlacts", session_id, menu)
+        await get_sub_menu("☁️ Open Rclone Menu ☁️", "rclonemenu", session_id, menu)
+        await get_sub_menu("⚙️ Control Actions ⚙️", "ctrlacts", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "❮ ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"settings selfdest {session_id}".encode("UTF-8")
+                    "Close Menu", f"settings selfdest {session_id}".encode("UTF-8")
                 )
             ]
         )
@@ -435,11 +435,11 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
                             ]
                         )
 
-        await get_sub_menu("❮ ɢᴏ ʙᴀᴄᴋ", "mainmenu", session_id, menu)
+        await get_sub_menu("Go Back", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "❮ ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"settings selfdest {session_id}".encode("UTF-8")
+                    "Close Menu", f"settings selfdest {session_id}".encode("UTF-8")
                 )
             ]
         )
@@ -483,17 +483,17 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
         )
         await get_bool_variable(
             "FORCE_DOCS_USER",
-            "User will choose force docs.",
+            "Not Implemented.User will choose force docs.",
             menu,
             "forcedocsuser",
             session_id,
         )
 
-        await get_sub_menu("❮ ɢᴏ ʙᴀᴄᴋ", "mainmenu", session_id, menu)
+        await get_sub_menu("Go Back", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "❮ ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"settings selfdest {session_id}".encode("UTF-8")
+                    "Close Menu", f"settings selfdest {session_id}".encode("UTF-8")
                 )
             ]
         )
@@ -691,8 +691,8 @@ async def confirm_buttons(e, val):
     await e.edit(
         f"Confirm the input :- <u>{val}</u>",
         buttons=[
-            KeyboardButtonCallback("ʏᴇꜱ", "confirmsetting true"),
-            KeyboardButtonCallback("ɴᴏ", "confirmsetting false"),
+            KeyboardButtonCallback("Yes", "confirmsetting true"),
+            KeyboardButtonCallback("No", "confirmsetting false"),
         ],
         parse_mode="html",
     )
