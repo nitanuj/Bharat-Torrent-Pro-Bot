@@ -92,7 +92,7 @@ except:
         STATUS_DEL_TOUT = 20
 
         # Allow the user settings to be accessed in private
-        USETTINGS_IN_PRIVATE = False
+        USETTINGS_IN_PRIVATE = True
 
         # Torrent max time to collect metadata in seconds
         TOR_MAX_TOUT = 100
@@ -106,7 +106,7 @@ except:
         # CHANGE THESE AT YOUR RISK
         LOCKED_USERS = False
         RSTUFF = False
-        FORCE_DOCS_USER = False
+        FORCE_DOCS_USER = True
         FAST_UPLOAD = True
         METAINFO_BOT = False
         EXPRESS_UPLOAD = True
