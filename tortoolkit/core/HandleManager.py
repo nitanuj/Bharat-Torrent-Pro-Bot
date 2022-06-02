@@ -318,7 +318,7 @@ async def handle_leech_command(e):
                 await check_link(e, rclone, is_zip, is_ext, conf_mes)
             else:
                 await e.reply(
-                    "<b>𝚃𝙶 𝙻𝙴𝙴𝙲𝙷 𝙸𝚂 𝙳𝙸𝚂𝙰𝙱𝙻𝙴𝙳 𝙱𝚈 𝚃𝙷𝙴 𝙾𝚆𝙽𝙴𝚁</b>", parse_mode="html"
+                    "<b>𝙱𝚑𝚊𝚛𝚊𝚝 𝚃𝚘𝚛𝚛𝚎𝚗𝚝 𝚒𝚜 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍 𝙱𝚢 𝚃𝚑𝚎 𝙾𝚠𝚗𝚎𝚛.</b>", parse_mode="html"
                 )
 
 
